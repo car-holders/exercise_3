@@ -59,7 +59,7 @@ public class CreateGarageDB {
 	                           "Du kan hente dem fra http://www.idi.ntnu.no/emner/tdt4145/programvare/javadb.html");
 		}
 		catch (SQLException e) {
-	        System.err.println("Det ble noe SQL-trøbbel; nærmere bestemt1 " + e);
+	        System.err.println("Det ble noe SQL-trï¿½bbel; nï¿½rmere bestemt1 " + e);
 
 	      }
 		catch (ArrayIndexOutOfBoundsException e) {
@@ -69,7 +69,7 @@ public class CreateGarageDB {
 	}
 	
 	/**
-	 * Metode som kjører spørringene.
+	 * Metode som kjï¿½rer spï¿½rringene.
 	 * @see insertTables()
 	 */
 	public void executeStatements(){
@@ -90,7 +90,7 @@ public class CreateGarageDB {
 					
 		}
 		catch (SQLException e) {
-	        System.err.println("Det ble noe SQL-trøbbel; nærmere bestemt " + e);
+	        System.err.println("Det ble noe SQL-trï¿½bbel; nï¿½rmere bestemt " + e);
 	      }
 		catch (ArrayIndexOutOfBoundsException e) {
 	        System.err.println("Oppgi databasebrukernavn og -passord som argumenter");

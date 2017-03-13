@@ -19,7 +19,7 @@ public class CreateFactoryDB {
 		
 	private String[] insertTables(){
 		
-		// SQL-spørringer som oppretter tabellene
+		// SQL-spï¿½rringer som oppretter tabellene
 		
 		String q1 = "CREATE TABLE software_archive " +
 				"(sw_version INTEGER , " +
@@ -68,11 +68,11 @@ public class CreateFactoryDB {
 	        this.connection = DriverManager.getConnection(dbURL);
 		}
 		catch (ClassNotFoundException e) {
-	        System.err.println("Sørg for at derby.jar er i classpathen.\n" +
+	        System.err.println("Sï¿½rg for at derby.jar er i classpathen.\n" +
 	                           "Du kan hente dem fra http://www.idi.ntnu.no/emner/tdt4145/programvare/javadb.html");
 		}
 		catch (SQLException e) {
-	        System.err.println("Det ble noe SQL-trøbbel; nærmere bestemt " + e);
+	        System.err.println("Det ble noe SQL-trï¿½bbel; nï¿½rmere bestemt " + e);
 	      }
 		catch (ArrayIndexOutOfBoundsException e) {
 	        System.err.println("Oppgi databasebrukernavn og -passord som argumenter");
@@ -100,7 +100,7 @@ public class CreateFactoryDB {
 					
 		}
 		catch (SQLException e) {
-	        System.err.println("Det ble noe SQL-trøbbel; nærmere bestemt " + e);
+	        System.err.println("Det ble noe SQL-trï¿½bbel; nï¿½rmere bestemt " + e);
 	      }
 		catch (ArrayIndexOutOfBoundsException e) {
 	        System.err.println("Oppgi databasebrukernavn og -passord som argumenter");
