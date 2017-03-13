@@ -23,3 +23,8 @@ hs_err_pid*
 .project
 .classpath
 bin
+
+# Embedded db #
+FactoryDB
+GarageDB
+derby.log
