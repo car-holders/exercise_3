@@ -14,6 +14,10 @@
 hs_err_pid*
 out/
 
+# Derby specific files #
+Log/
+settings.xml
+
 # Mac files #
 .DS_Store
 
