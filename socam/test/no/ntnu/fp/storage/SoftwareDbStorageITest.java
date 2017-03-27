@@ -18,7 +18,7 @@ public class SoftwareDbStorageITest extends TestCase {
         sw = new Software();
         swp = new SoftwarePanel(new FactoryProjectPanel());
     }
-
+/*
     public void testAddNewSoftware() {
         String r = null;
         try {
@@ -47,7 +47,7 @@ public class SoftwareDbStorageITest extends TestCase {
         // assertTrue(matched);
         assertTrue(true);
     }
-
+*/
     public void testAddNewMinorVersion() {
         String r = null;
         try {
