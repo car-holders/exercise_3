@@ -16,4 +16,7 @@
 7. Run InsertTestDataGarageDb.java
 
 ## Running the software
-To run the Factory side software, launch FactoryProjectPanel.java. A factory server can be created with the “connect” menu item. To run the Garage side software that connects to the factory server, run ProjectPanel.java, and connect to the server with the “connect” menu item. In both of the applications, the local database can be loaded with the menu item “Log on”
+To run the Factory side software, launch FactoryProjectPanel.java. A factory server can be created with the “connect”
+menu item. To run the Garage side software that connects to the factory server, run ProjectPanel.java, and connect to
+the server with the “connect” menu item. In both of the applications, the local database can be loaded with the menu
+item “Log on”
