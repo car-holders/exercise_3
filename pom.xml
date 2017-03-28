@@ -27,7 +27,6 @@
                             </additionalClasspathElements>
                             <cleanupDaemonThreads>false</cleanupDaemonThreads>
                             <mainClass>no.ntnu.fp.storage.CreateGarageDB</mainClass>
-                            <!--<mainClass>no.ntnu.fp.storage.CreateFactoryDB</mainClass>-->
                         </configuration>
                     </execution>
                     <execution>
