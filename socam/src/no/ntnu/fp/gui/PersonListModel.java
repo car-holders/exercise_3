@@ -18,7 +18,7 @@ import no.ntnu.fp.model.Project;
  *
  * @see javax.swing.AbstractListModel <a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/AbstractListModel.html">javax.swing.AbstractListModel</a>
  *
- * @author Hallvard Tr¾tteberg
+ * @author Hallvard Trï¿½tteberg
  * @author Thomas &Oslash;sterlie
  * 
  * @version $Revision: 1.5 $ - $Date: 2008-04-30 12:16:24 $
