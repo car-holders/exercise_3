@@ -1,6 +1,6 @@
 .PHONY: all build clean database test
 
-all: clean build database install test
+all: clean build database install
 
 build:
 	@mvn clean compile test-compile
