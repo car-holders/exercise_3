@@ -1,16 +1,19 @@
-.PHONY: all build database test
+.PHONY: all build clean database test
 
-all: build database install test
+all: clean build database install test
 
 build:
-	mvn clean compile test-compile
+	@mvn clean compile test-compile
+
+clean:
+	@rm -rf ./FactoryDB ./GarageDB
 
 database:
-	mvn exec:java@setUpFactoryDb
-	mvn exec:java@setUpGarageDb
+	@mvn exec:java@setUpFactoryDb
+	@mvn exec:java@setUpGarageDb
 
 install:
-	mvn install
+	@mvn install
 
 test:
-	mvn test
+	@mvn test
