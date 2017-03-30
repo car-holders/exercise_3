@@ -28,10 +28,10 @@ public class EcuDbStorageITest extends TestCase{
     public void testGetEcuSoft(){
         EcuDbStorage esd = new EcuDbStorage();
 
-        SimpleEcu se = new SimpleEcu(6, 1);
-        esd.addEcu(se, null);
-        int [] ecuSoft = esd.getEcuSoft(new Ecu(6));
-        assertEquals(6, ecuSoft[ECU_ID]);
+        SimpleEcu se = new SimpleEcu(89, 1);
+
+        int [] ecuSoft = esd.getEcuSoft(new Ecu(89));
+        assertEquals(89, ecuSoft[ECU_ID]);
         assertEquals(1, ecuSoft[SOFTWARE_ID]);
     }
 }
