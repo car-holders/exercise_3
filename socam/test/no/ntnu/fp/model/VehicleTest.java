@@ -1,6 +1,9 @@
 package no.ntnu.fp.model;
 
 import java.util.ArrayList;
+/**
+ /* Created by sklirg, jie on 30/03/2017.
+ */
 
 import junit.framework.TestCase;
 
@@ -41,6 +44,54 @@ public class VehicleTest extends TestCase {
 		assertEquals(0, v.indexOf(ecu));
 	}
 	
+	public void testGetEcus(){
+		assertEquals(1, v.getEcus().size());
+	}
 	
+	public void testSetEcus(){
+		v.setEcus(null);
+		assertEquals(null, v.getEcus());
+		v.setEcus(ecuList);
+		assertEquals(1, v.getEcus().size());
+	}
+	
+	public void testGetLargestEcuId(){
+		assertEquals(0, v.getLargestEcuId());
+	}
+	
+	public void testSetVehicleDB(){
+		v.setVehicleID("Bruh");
+		assertEquals("Bruh", v.getVehicleID());
+	}
+	
+	Vehicle vehicle = new Vehicle();
+
+    /*
+     * GBR2:
+     * The GP shall be able to download information from the vehicle’s main computer
+     * "information" is vaguely defined
+     */
+    public void testGetVehicleIdOnNewVehicle() {
+        assertEquals("", this.vehicle.getVehicleID());
+    }
+    public void testGetVehicleIdOnNewConstructedVehicle() {
+        Vehicle idVehicleTest = new Vehicle("testID", "", new ArrayList(), "");
+        assertEquals("testID", idVehicleTest.getVehicleID());
+    }
+
+    public void testGetVehicleHistoryLogOnNewVehicle() {
+        assertEquals("", this.vehicle.getHistoryLog());
+    }
+
+    public void testGetVehicleHistoryLogAfterChangingHistoryLog() {
+        String initialHistoryLog = "created vehicle";
+        String appendedHistoryLog = "updated vehicle";
+
+        this.vehicle.setHistoryLog(initialHistoryLog);
+        assertEquals(initialHistoryLog, this.vehicle.getHistoryLog());
+
+        this.vehicle.setHistoryLog(appendedHistoryLog);
+        assertEquals(appendedHistoryLog, this.vehicle.getHistoryLog());
+    }
 
 }
