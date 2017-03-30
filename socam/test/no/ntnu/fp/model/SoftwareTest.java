@@ -43,6 +43,7 @@ public class SoftwareTest extends TestCase {
 	public void testSetUrl() {
 		s.setUrl("123124123.com");
 		assertTrue(s.getUrl() instanceof String );
+		assertEquals("123124123.com", s.getUrl());
 	}
 	
 
