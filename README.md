@@ -1,5 +1,9 @@
 # exercise_3
 
+[![Build Status](https://drone.sklirg.io/api/badges/car-holders/exercise_3/status.svg)](https://drone.sklirg.io/car-holders/exercise_3)
+[![codecov](https://codecov.io/gh/car-holders/exercise_3/branch/master/graph/badge.svg)](https://codecov.io/gh/car-holders/exercise_3)
+
+
 ## Install instructions
 1. Import the SoCam directory into your preferred IDE, e.g Eclipse or IntelliJ, as a new project
 
