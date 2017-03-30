@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import no.ntnu.fp.model.SimpleEcu;
 import no.ntnu.fp.model.Software;
 
-public class EcuDbStorageTest extends TestCase{
+public class EcuDbStorageITest extends TestCase{
     public void testAddEcu(){
         SoftwareDbStorage sb = new SoftwareDbStorage();
         Software sw = new Software(6,1,"idk");
