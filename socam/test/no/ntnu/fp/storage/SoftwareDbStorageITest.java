@@ -58,4 +58,26 @@ public class SoftwareDbStorageITest extends TestCase {
 
         assertEquals("SubId not 0, it was changed and added to db", r);
     }
+
+    /*
+     * GBR4 - GBR-T3
+     * The GP shall be able to identify the latest version of each
+     * software component for each ECU based on their version number
+    */
+    public void testGetLatestSoftwareVersion() {
+        Software sw1 = new Software(100, 1, "");
+        Software sw2 = new Software(100, 2, "");
+        Software sw3 = new Software(100, 3, "");
+        Software sw4 = new Software(100, 4, "");
+        try {
+            sdbs.addSoftware(sw1, swp);
+            sdbs.addSoftware(sw2, swp);
+            sdbs.addSoftware(sw3, swp);
+            sdbs.addSoftware(sw4, swp);
+        } catch (NullPointerException npe) {
+            // Not testing updating UI components in this test
+        }
+        int id = sdbs.getBiggestSubId(sw4.getSwVersion());
+        assertEquals(sw4.getMinorVersion(), id);
+    }
 }
