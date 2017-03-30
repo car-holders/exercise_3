@@ -46,10 +46,11 @@ public class VehicleDbStorageITest extends TestCase {
 	public void testAddEcus(){
 		messages = vehicledb.addEcus(vehicle, nvp);
 		assertEquals("Vehicle updated", messages.get(0));
-		
 	}
+
 	public void testGetVehicleNoVehiclesInDb() {
 		Vehicle vehicle = vehicledb.getVehicle(200);
 		assertEquals(null, vehicle);
 	}
+
 }
