@@ -9,7 +9,10 @@ import java.util.ArrayList;
  */
 public class VehicleTest extends TestCase {
     Vehicle vehicle;
-    public void setUp() {
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
         vehicle = new Vehicle();
     }
     /*
