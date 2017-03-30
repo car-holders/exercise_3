@@ -10,7 +10,7 @@ import junit.framework.TestCase;
 public class VehicleTest extends TestCase {
 
 	private Vehicle v;
-	private ArrayList<Ecu> ecuList = new ArrayList<>();
+	private ArrayList<Ecu> ecuList = new ArrayList<Ecu>();
 	private Ecu ecu = new Ecu(0);
 	private String id = "1";
 	private String history = "blabla";
