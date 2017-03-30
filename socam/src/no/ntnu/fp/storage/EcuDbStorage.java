@@ -85,9 +85,9 @@ public class EcuDbStorage extends FactoryDbStorage{
 	}
 	
 	public String[] addEcu(SimpleEcu simpleEcu, EcuPanel panel){
-		
+
 		String[] message = {"Nothing happened, there is an error in your code",""};
-		
+
 		if(isEcuInActionScript(simpleEcu)){
 			message[0] = "ECU is already in database";
 		}
@@ -105,7 +105,7 @@ public class EcuDbStorage extends FactoryDbStorage{
 			message[0] = "Ecu added to database";
 			message[1] = "ok";
 		}
-		
+
 		return message;
 	}
 	
@@ -234,12 +234,12 @@ public class EcuDbStorage extends FactoryDbStorage{
 			rs.close();
 			statement.close();
 			connection.close();
-			
+
 		}
 		catch(SQLException e){
 			System.err.println("SQL-klikk i isEcuInActionScript: " + e);
 		}
-		
+
 		return false;
 	}
 	

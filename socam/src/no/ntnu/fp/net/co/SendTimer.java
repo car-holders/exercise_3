@@ -20,7 +20,7 @@ import no.ntnu.fp.net.cl.KtnDatagram;
  * @see java.util.TimerTask
  * @see java.util.Timer
  *
- * @author Stein Jakob Nordbø
+ * @author Stein Jakob Nordbï¿½
  *
  */
 public class SendTimer extends TimerTask {

@@ -18,6 +18,23 @@ public class SoftwareDbStorageITest extends TestCase {
         sw = new Software();
         swp = new SoftwarePanel(new FactoryProjectPanel());
     }
+
+    public void testAddSoftware() {
+        int softwareVersion = 8;
+        SoftwareDbStorage sb = new SoftwareDbStorage();
+        SoftwarePanel sp1 = new SoftwarePanel(new FactoryProjectPanel());
+        Software sw1 = new Software(softwareVersion, 0, "idk");
+        sp1.setModel(sw1);
+
+        String message1 = sb.addSoftware(sw1, sp1);
+        assertEquals("Software added", message1);
+
+        SoftwarePanel sp2 = new SoftwarePanel(new FactoryProjectPanel());
+        Software sw2 = new Software(softwareVersion, 1, "idk");
+        sp2.setModel(sw2);
+        String message2 = sb.addSoftware(sw2, sp2);
+        assertEquals("Software id allready in db, added new sub id", message2);
+    }
 /*
     public void testAddNewSoftware() {
         String r = null;

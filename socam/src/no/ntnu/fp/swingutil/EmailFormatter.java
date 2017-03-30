@@ -3,7 +3,7 @@ package no.ntnu.fp.swingutil;
 /**
  * Formats an e-mail string on the format <code>&lt;usernamet&gt;@&lt;domain&gt;
  * 
- * @author Hallvard Tr¾tteberg 
+ * @author Hallvard Trï¿½tteberg 
  * 
  * @version $Revision: 1.1 $ - $Date: 2008-04-16 12:57:02 $
  */

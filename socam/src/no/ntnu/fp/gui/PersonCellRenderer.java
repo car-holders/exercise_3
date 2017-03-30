@@ -3,7 +3,7 @@ package no.ntnu.fp.gui;
 /**
  * A ListCellRenderer for Person objects.
  * 
- * @author Hallvard Tr¾tteberg 
+ * @author Hallvard Trï¿½tteberg 
  * @version $Revision: 1.5 $ - $Date: 2008-04-22 11:53:06 $
  */
 
