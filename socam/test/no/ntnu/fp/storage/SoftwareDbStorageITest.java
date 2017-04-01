@@ -5,11 +5,19 @@ import junit.framework.TestCase;
 import no.ntnu.fp.gui.FactoryProjectPanel;
 import no.ntnu.fp.gui.SoftwarePanel;
 import no.ntnu.fp.model.Software;
+import no.ntnu.fp.model.Vehicle;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class SoftwareDbStorageITest extends TestCase {
     private SoftwareDbStorage sdbs;
     private Software sw;
     private SoftwarePanel swp;
+    private Connection connection;
 
     @Override
     protected void setUp() throws Exception {
@@ -96,5 +104,31 @@ public class SoftwareDbStorageITest extends TestCase {
         }
         int id = sdbs.getBiggestSubId(sw4.getSwVersion());
         assertEquals(sw4.getMinorVersion(), id);
+    }
+
+    public void testSendNewVersionToGarages() {
+        FactoryDbStorage factoryDbStorage = new FactoryDbStorage();
+        Connection connection = factoryDbStorage.connectToFactoryDb();
+        //assertNotNull(connection);
+
+        ResultSet rs = null;
+        ArrayList emails = new ArrayList();
+        try {
+            Statement statement = connection.createStatement();
+            rs = statement.executeQuery("SELECT * FROM garage");
+            while (rs.next()) {
+                emails.add(rs.getString(3));
+            }
+            rs.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            emails = null;
+            System.err.println(e);
+        }
+        assertNotNull("No SQLExceptions", emails);
+        assertTrue("First email is String", emails.get(0) instanceof String);
+
     }
 }

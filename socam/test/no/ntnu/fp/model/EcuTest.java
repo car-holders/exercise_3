@@ -10,6 +10,7 @@ public class EcuTest extends TestCase {
 	private int subSwId = 23;
 	private boolean newest = true;
 	private int newestSub = 32;
+	private Software sw;
 	
 	public EcuTest() {
 		ecu = new Ecu(ecuId, swId, subSwId, newest, newestSub);
@@ -58,5 +59,11 @@ public class EcuTest extends TestCase {
 	public void testSetNewestSub(){
 		ecu.setNewestSub(0);
 		assertEquals(0, ecu.getNewestSub());
+	}
+
+	public void testDownloadLatestSoftware() {
+		sw = new Software(swId + 1, subSwId, "myurl.com");
+		assertNotSame(sw.getSwVersion(), swId);
+		assertEquals(sw.getUrl(), "myurl.com");
 	}
 }
