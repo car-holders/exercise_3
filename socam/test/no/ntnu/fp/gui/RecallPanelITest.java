@@ -6,7 +6,7 @@ import no.ntnu.fp.gui.FactoryProjectPanel;
 public class RecallPanelITest extends TestCase {
 
 	private FactoryProjectPanel fpPanel = new FactoryProjectPanel();
-	private RecallPanel rp = new RecallPanel();
+	private RecallPanel rp;
 	
 	public RecallPanelITest() {
 		rp = new RecallPanel(fpPanel);
