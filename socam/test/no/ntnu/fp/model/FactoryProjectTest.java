@@ -51,7 +51,7 @@ public class FactoryProjectTest extends TestCase {
 	
 	
 	public void testGetVehicleIndex() {
-		FactoryProject fv = new FactoryProject(new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
+		FactoryProject fv = new FactoryProject(new ArrayList<Vehicle>(), new ArrayList<Software>(), new ArrayList<SimpleEcu>());
 		Vehicle v = new Vehicle();
 		v.setVehicleID("asd");
 		
