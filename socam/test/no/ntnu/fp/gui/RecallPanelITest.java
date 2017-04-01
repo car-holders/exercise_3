@@ -1,6 +1,7 @@
 package no.ntnu.fp.gui;
 
 import junit.framework.TestCase;
+import no.ntnu.fp.gui.FactoryProjectPanel;
 
 public class RecallPanelITest extends TestCase {
 
