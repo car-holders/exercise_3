@@ -1,8 +1,5 @@
 package no.ntnu.fp.model;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 
 import junit.framework.TestCase;
 
